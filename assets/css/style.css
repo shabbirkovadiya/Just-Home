@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "roboto-regular";
+}
+
+/* =====  Font Family  ===== */
+
+@font-face {
+  font-family: "roboto-thin";
+  src: url(../fonts/Roboto-Thin.ttf);
+
+  /*?  Font Weight 100  ?*/
+}
+
+@font-face {
+  font-family: "roboto-light";
+  src: url(../fonts/Roboto-Light.ttf);
+
+  /*?  Font Weight 300  ?*/
+}
+
+@font-face {
+  font-family: "roboto-regular";
+  src: url(../fonts/Roboto-Regular.ttf);
+
+  /*?  Font Weight 400  ?*/
+}
+
+@font-face {
+  font-family: "roboto-medium";
+  src: url(../fonts/Roboto-Medium.ttf);
+
+  /*?  Font Weight 500  ?*/
+}
+
+@font-face {
+  font-family: "roboto-bold";
+  src: url(../fonts/Roboto-Bold.ttf);
+
+  /*?  Font Weight 700  ?*/
+}
+
+/* =====  Root Variables  ===== */
+
+:root {
+  --white-smoke: #f7f7f7;
+  --Pure-white: #ffffff;
+  --black-color: #1a1a1a;
+  --Pure-black: #000;
+  --green-color: #1f4b43;
+  --golden-yellow: #e7c873;
+  --pink-white: #fff8f6;
+  --light-red: #eb664e;
+}
+
+/* =====  Basic Code  ===== */
+
+*::selection {
+  background-color: var(--green-color);
+  color: var(--golden-yellow);
+}
+
+header {
+  padding: 40px;
+  background-color: #1f4b43;
+}
+/* =====  Start  Navbar  ===== */
+
+.navbar-container {
+  width: 100%;
+  border-radius: 80px;
+  background-color: var(--Pure-white);
+  padding: 20px 40px;
+}
+.navbar-brand img {
+  height: auto;
+  width: 150px;
+}
+.navbar-nav a {
+  font-family: "roboto-medium";
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--black-color);
+  margin-right: 40px;
+}
+
+/* === subnav start here ===  */
+.sub-nav {
+  gap: 20px !important;
+  align-items: center;
+}
+.sub-nav .phone-no {
+  margin-left: 5px;
+  font-family: "roboto-medium";
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--black-color);
+}
+.contact .phone-icon {
+  font-size: 16px !important;
+}
+.user-icon {
+  padding: 10px 12px;
+  background-color: transparent;
+  border: 1px solid var(--black-color);
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+  font-size: 16px;
+
+  &:hover {
+    background-color: var(--black-color);
+    border: 1px solid var(--black-color);
+    color: var(--Pure-white);
+  }
+}
+.nav-btn {
+  padding: 10px 26px;
+  font-family: "roboto-medium";
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 1px solid var(--black-color);
+  color: var(--black-color);
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--black-color);
+    border: 1px solid var(--black-color);
+    color: var(--Pure-white);
+  }
+}
+
+/* =====  End  navbar section  ===== */
+
+/* =====  Start Media Queries Section  ===== */
+
+@media only screen and (max-width: 1400px) {
+  header {
+    padding: 30px;
+  }
+  /* =====  Start  Navbar  ===== */
+  .navbar-container {
+    padding: 15px 30px;
+  }
+
+  .navbar-nav a {
+    margin-right: 20px;
+  }
+
+  /* === subnav start here ===  */
+  .sub-nav {
+    gap: 10px !important;
+  }
+  .nav-btn {
+    padding: 10px 18px;
+  }
+
+  /* =====  End  navbar section  ===== */
+
+  /*?  B - Width >= 1400px   xxl :- (Very large Desktops)  ?*/
+}
+
+@media only screen and (max-width: 1200px) {
+  /* =====  Start  Navbar  ===== */
+
+  .navbar-container {
+    padding: 15px 20px;
+  }
+  .navbar-brand img {
+    height: auto;
+    width: 120px;
+  }
+  .navbar-nav a {
+    margin-right: 10px;
+    font-size: 13px;
+  }
+
+  /* === subnav start here ===  */
+  .sub-nav {
+    gap: 15px !important;
+  }
+  .sub-nav .phone-no {
+    font-size: 13px;
+  }
+  .contact .phone-icon {
+    font-size: 13px !important;
+  }
+  .user-icon {
+    font-size: 13px !important;
+  }
+
+  .nav-btn {
+    font-size: 13px;
+  }
+
+  /*?  B - 1200px to 1400px   xl :- (Large Desktops)  ?*/
+}
+
+@media only screen and (max-width: 992px) {
+
+    .navbar-container {
+        padding: 15px 30px;
+      }
+
+  /*?  B - 992px to 1200px   lg :- (Desktops, Laptops, Large Tablets)  ?*/
+}
+
+@media only screen and (max-width: 768px) {
+  /*?  768px to 992px   md :- (Tablets and small desktops)  ?*/
+}
+
+@media only screen and (max-width: 576px) {
+  /*?  B - 576px to 768px   sm :- (Landscape and Portrait mobiles)  ?*/
+}
+
+/* =====  End Media Queries Section  ===== */
+
+/* =====  Start Scrollbar Section  ===== */
+/* 
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: ;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: ;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: ;
+} */
+
+/* =====  End Scrollbar Section  ===== */
